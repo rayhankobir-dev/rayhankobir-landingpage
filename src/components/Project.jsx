@@ -25,7 +25,7 @@ function Project() {
                   </div>
                 </div>
                 <div className="appie-project-thumb">
-                  <img src="assets/images/project-thumb.png" alt="" />
+                  <img src="./images/project-thumb.png" alt="" />
                 </div>
               </div>
             </div>

@@ -12,11 +12,16 @@ import Faq from "./components/Faq";
 import Features from "./components/Features";
 import Teams from "./components/Teams";
 import { Fragment } from "react";
+import Drawer from "./mobile/Drawer";
+import useToggle from "./Hooks/useToggle";
 
 function App() {
+  const [drawer, drawerAction] = useToggle(false);
+
   return (
     <Fragment>
-      <Header />
+      <Drawer drawer={drawer} action={drawerAction.toggle} />
+      <Header action={drawerAction.toggle} />
       <Hero />
       <Services />
       <Features />

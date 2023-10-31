@@ -1,6 +1,4 @@
 import { Fragment, useState } from "react";
-import { Link } from "react-router-dom";
-import logo from "../../assets/images/logo.png";
 
 // eslint-disable-next-line react/prop-types
 function Drawer({ drawer, action }) {
@@ -33,7 +31,7 @@ function Drawer({ drawer, action }) {
                   </a>
                 </div>
                 <div className="offcanvas-brand text-center mb-40">
-                  <img src={logo} alt="" />
+                  <img src={"./images/logo.png"} alt="" />
                 </div>
                 <div id="menu" className="text-left ">
                   <ul className="offcanvas_main_menu">
@@ -42,102 +40,58 @@ function Drawer({ drawer, action }) {
                       id="home"
                       className="menu-item-has-children active"
                     >
-                      <span className="menu-expand">
-                        <i className="fa fa-angle-down"></i>
-                      </span>
                       <a href="#">Home</a>
-                      <ul
-                        className="sub-menu"
-                        style={{
-                          height: item === "home" ? itemSize : "0px",
-                        }}
-                      >
-                        <li>
-                          <Link to="/">Home 1</Link>
-                        </li>
-                        <li>
-                          <Link to="/home-two">Home 2</Link>
-                        </li>
-                        <li>
-                          <Link to="/home-three">Home 3</Link>
-                        </li>
-                        <li>
-                          <Link to="/home-four">Home 4</Link>
-                        </li>
-                        <li>
-                          <Link to="/home-five">Home 5</Link>
-                        </li>
-                        <li>
-                          <Link to="/home-six">Home 6</Link>
-                        </li>
-                        <li>
-                          <Link to="/home-seven">Home 7</Link>
-                        </li>
-                        <li>
-                          <Link to="/home-eight">Home 8</Link>
-                        </li>
-                      </ul>
                     </li>
                     <li
                       onClick={(e) => handler(e, "service")}
                       id="service"
                       className="menu-item-has-children active"
                     >
-                      <Link to="/service">Service</Link>
+                      <a href="/service">Services</a>
                     </li>
                     <li
-                      onClick={(e) => handler(e, "pages")}
-                      id="pages"
+                      onClick={(e) => handler(e, "projects")}
+                      id="projects"
                       className="menu-item-has-children active"
                     >
-                      <span className="menu-expand">
-                        <i className="fa fa-angle-down"></i>
-                      </span>
-                      <a href="#">Pages</a>
-                      <ul
-                        className="sub-menu"
-                        style={{
-                          height: item === "pages" ? itemSize : "0px",
-                        }}
-                      >
-                        <li>
-                          <Link to="/about-us">About Us</Link>
-                        </li>
-
-                        <li>
-                          <Link to="/error">Error</Link>
-                        </li>
-                      </ul>
+                      <a href="/coprojectsntact">Projects</a>
                     </li>
                     <li
-                      onClick={(e) => handler(e, "news")}
-                      id="news"
+                      onClick={(e) => handler(e, "blogs")}
+                      id="blogs"
                       className="menu-item-has-children active"
                     >
-                      <span className="menu-expand">
-                        <i className="fa fa-angle-down"></i>
-                      </span>
-                      <a href="#">News</a>
-                      <ul
-                        className="sub-menu"
-                        style={{
-                          height: item === "news" ? itemSize : "0px",
-                        }}
-                      >
-                        <li>
-                          <Link to="/news">news page</Link>
-                        </li>
-                        <li>
-                          <Link to="/news/single-news">Single News</Link>
-                        </li>
-                      </ul>
+                      <a href="/blogs">Blogs</a>
                     </li>
                     <li
                       onClick={(e) => handler(e, "contact")}
                       id="contact"
                       className="menu-item-has-children active"
                     >
-                      <Link to="/contact">Contact</Link>
+                      <a href="/contact">Contact</a>
+                    </li>
+                    <li
+                      onClick={(e) => handler(e, "others")}
+                      id="others"
+                      className="menu-item-has-children active"
+                    >
+                      <span className="menu-expand">
+                        <i className="fa fa-angle-down"></i>
+                      </span>
+                      <a href="#">Others</a>
+                      <ul
+                        className="sub-menu"
+                        style={{
+                          height: item === "others" ? itemSize : "0px",
+                        }}
+                      >
+                        <li>
+                          <a href="/about-us">About Us</a>
+                        </li>
+                        <li>
+                          <a href="/policy">Policy</a>
+                        </li>
+                      </ul>
                     </li>
                   </ul>
                 </div>
@@ -169,18 +123,19 @@ function Drawer({ drawer, action }) {
                   <ul>
                     <li>
                       <a href="#">
-                        <i className="fal fa-envelope"></i> support@appie.com
+                        <i className="fal fa-envelope"></i>{" "}
+                        rayhankobir793@gmail.com
                       </a>
                     </li>
                     <li>
                       <a href="#">
-                        <i className="fal fa-phone"></i> +(642) 342 762 44
+                        <i className="fal fa-phone"></i> +8801704355097
                       </a>
                     </li>
                     <li>
                       <a href="#">
-                        <i className="fal fa-map-marker-alt"></i> 442 Belle
-                        Terre St Floor 7, San Francisco, AV 4206
+                        <i className="fal fa-map-marker-alt"></i> Abdul Aziz
+                        Road Ka/48 Vatara, Dhaka-1212
                       </a>
                     </li>
                   </ul>
